@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+ <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Generalists</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+<style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+</style>
+
+  <body>
+
+    <%= render 'shared/navigation_bar' %>
+
+
+<!-- Pulls in Navigation bar from Shared layouts folder in Views -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  	    <div class="container">
+    <%= render "layouts/header" %>
+<%=yield %>
+<%= render "layouts/footer" %>
+  </body>
+</div>
+</html>
+
+

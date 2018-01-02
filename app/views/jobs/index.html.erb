@@ -1,0 +1,28 @@
+<div class="1">
+	<h1>Current jobs</h1>
+<hr>
+</div>
+
+<% @jobs.each do |job| %>
+  <div class="job">
+    <h2><%= link_to job.title, job.applyurl, target: :_blank %> at <%= link_to job.companyurl, job.company %></h2>
+    Location: <%= job.location %></br>
+    Description: <%= job.description %></br>
+    Salary: <%= job.salaryrate %></p>
+
+	<p><button type="button" class="btn btn-warning"><%= link_to "More info", job %></button></p>
+ 	<p><button type="button" class="btn btn-warning"><%= link_to "Apply", job.applyurl, target: :_blank %></button></p>
+ 	<hr>
+
+    <br><br>
+  </div>
+<% end %>
+
+
+
+
+
+
+
+
+<p><%= paginate @jobs %></p>
