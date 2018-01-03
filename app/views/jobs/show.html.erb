@@ -1,10 +1,20 @@
 
 
- <div class="job">
-    <p>Location: <%= job.location %></p>
-    <p>Description: <%= job.description %></p>
-    <p>Salary: <%= job.salaryrate %></p>
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12">
+    <h2><%= @job.title %> at <%= @job.company %></h2>
+    <p>Location: <%= @job.location %></p>
+    <p>Description: <%= @job.description %></p>
+    <p>Salary: <%= @job.salaryrate %></p>
+
+	<p><button type="button" class="btn btn-info"><%= link_to "Apply", target: :_blank %></button></p>
+
+
+</div>
+
+</div>
+
 </div>
 
 
- 	<p><button type="button" class="btn">Apply: <%= job.applyurl %></button></p>

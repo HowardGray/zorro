@@ -1,30 +1,7 @@
 <h1>Post a new job</h1>
 
   <div class="form-group">
-<%= simple_form_for @job, html: { class: 'form-horizontal' } do |form| %> 
-  <%= form.input :title, :class => "col-form-label", label: "Job title", error: 'Role is mandatory, please specify one'  %>
-  <%= form.input :description, label: "Job description", :class => "form-control" %>
-
-
-  <%= form.input :company, label: "Your company" %>
-  <%= form.input :companyurl, label: "Company URL" %>
-  <%= form.input :location, label: "Location" %>
-
-
-  <%= form.input :startdate, label: "Start Date" %>
-
-  <%= form.input :level, label: "Level" %>
-
-  <%= form.input :jobtype, label: "Job Type" %>
-
-  <%= form.input :salaryrate, label: "Salary / Rate" %>
-
-   <%= form.input :applyurl, label: "Link to apply for job" %>
-
-  <%= form.input :applyemail, label: "Email address for enquiries", placeholder: 'user@domain.com' %>
-
-  <%= form.button :submit, :class => 'btn btn-primary' %>
+<%= render "form", locals: { job: @job } %>
 
 
 </div>
-<% end %>

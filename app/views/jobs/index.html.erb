@@ -1,28 +1,33 @@
-<div class="1">
+<div class="container-fluid">
 	<h1>Current jobs</h1>
+<h4><%= link_to "Post a job", new_job_path %></h4>
+
 <hr>
+
+
 </div>
 
+
+
 <% @jobs.each do |job| %>
-  <div class="job">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12">
+
     <h2><%= link_to job.title, job.applyurl, target: :_blank %> at <%= link_to job.companyurl, job.company %></h2>
     Location: <%= job.location %></br>
     Description: <%= job.description %></br>
     Salary: <%= job.salaryrate %></p>
 
-	<p><button type="button" class="btn btn-warning"><%= link_to "More info", job %></button></p>
- 	<p><button type="button" class="btn btn-warning"><%= link_to "Apply", job.applyurl, target: :_blank %></button></p>
+	<p><button type="button" class="btn btn-info"><%= link_to "More info", job %></button></p>
+ 	<p><button type="button" class="btn btn-info"><%= link_to "Apply", job.applyurl, target: :_blank %></button></p>
  	<hr>
 
     <br><br>
   </div>
+</div>
+</div>
 <% end %>
-
-
-
-
-
-
 
 
 <p><%= paginate @jobs %></p>
