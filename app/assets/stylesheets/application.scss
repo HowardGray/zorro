@@ -1,5 +1,8 @@
 body {
-  background: #06399C;
+  background-image: linear-gradient(199deg, #B4D6C6, #576A9C);
+  background-repeat: no-repeat;
+  height: 100%;
+  background-attachment: fixed;
   color: white;
   font: 14px/1.5 Helvetica, Arial, sans-serif;
   margin: 20px auto;
@@ -16,6 +19,14 @@ a:hover
 color: #ffffff;
 }
 
+.jobsummary
+{
+  background-color: #000;
+  color: white;
+  font: 14px/1.5 Helvetica, Arial, sans-serif;
+  margin: 20px auto;
+  width: 800px;
+}
 
 
 hr {
@@ -35,8 +46,14 @@ hr {
     padding: 14px 24px;
     border: 0 none;
     font-weight: 700;
+    color: #E7812E;
 }
  
+.btn-info {
+  color: #E7812E;
+}
+
+
 .btn:focus, .btn:active:focus, .btn.active:focus {
     outline: 0 none;
 }

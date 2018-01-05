@@ -1,18 +1,27 @@
 
 
 <div class="container-fluid">
+    <div class="jobsummary">
 <div class="row">
 <div class="col-md-12">
     <h2><%= @job.title %> at <%= @job.company %></h2>
+
+
+    <p>Company URL: <%= @job.companyurl %></p>
+    <p>Start Date: <%= @job.startdate %></p>
+    <p>Level: <%= @job.level %></p>
+    <p>Job Type: <%= @job.jobtype %></p>
+    <p>Email Address for applications: <%= @job.applyemail %></p>
     <p>Location: <%= @job.location %></p>
     <p>Description: <%= @job.description %></p>
     <p>Salary: <%= @job.salaryrate %></p>
+
 
 	<p><button type="button" class="btn btn-info"><%= link_to "Apply", target: :_blank %></button></p>
 
 
 </div>
-
+</div>
 </div>
 
 </div>

@@ -2,9 +2,8 @@ Rails.application.routes.draw do
   get 'jobs/index'
   get 'jobs/show'
   get 'jobs/new'
-  get "/static_pages/:page" => "static_pages#show"
 
-
+  get 'pages/about' => 'high_voltage/pages#show', id: 'about'
 
   resources :jobs
 	root 'jobs#index'
