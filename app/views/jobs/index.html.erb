@@ -13,9 +13,8 @@
           <div class="row">
             <div class="col col-sm-8">
               <p class="in-line"><button type="button" class="btn btn-info bg-orange border-orange width-125 t-center"><%= link_to "More info", job, class: 'co-white bold' %></button></p>
-              <p class="in-line"><button type="button" class="btn btn-info bg-red border-red width-125 t-center"><%= link_to "Apply Now", job.applyurl, target: :_blank, class: 'co-white bold' %></button></p>
+              <p class="in-line"><button type="button" class="btn btn-info bg-red border-red width-125 t-center"><a class='co-white bold' href="<%= job.applyurl %>" target='blank'>Apply Now</a></button></p>
             </div>
-
             <div class="col col-sm-4 t-right co-dark-grey">
               <p class="ma-0"><span class="bold">Location:</span> <%= job.location %></p>
               <p class="ma-0"><span class="bold">Posted:</span> <%= time_ago_in_words(job.created_at) %> ago</p>

@@ -1,26 +1,45 @@
-<%= simple_form_for @job, html: { class: 'form-horizontal' } do |form| %> 
+<%= simple_form_for @job, html: { class: 'form-horizontal' } do |f| %> 
 
-  <%= form.input :title, :class => "col-form-label", label: "Job title", error: 'Role is mandatory, please specify one'  %>
-  <%= form.input :description, label: "Job description", :class => "form-control" %>
+  <%= f.input :title, :class => "col-form-label", label: "Job title", error: 'Role is mandatory, please specify one'  %>
+  <%= f.input :description, label: "Job description", :class => "form-control" %>
+  
+  <div class="row">
+    <div class="col col-sm-6">
+      <%= f.input :company, label: "Your company" %>
+    </div>
 
+    <div class="col col-sm-6">
+      <%= f.input :companyurl, label: "Company URL" %>
+    </div>
+  </div>
 
-  <%= form.input :company, label: "Your company" %>
-  <%= form.input :companyurl, label: "Company URL" %>
-  <%= form.input :location, label: "Location" %>
+  <div class="row">
+    <div class="col col-sm-6">
+      <%= f.input :level, label: 'Level', :as => :select, :collection => Job.levels.keys.to_a, include_blank: false %> 
+    </div>
 
+    <div class="col col-sm-6">
+      <%= f.input :location, label: "Location" %>
+    </div>
+  </div>
 
-  <%= form.input :startdate, label: "Start Date" %>
+  <div class="row">
 
-  <%= form.input :level, label: "Level" %>
+    <div class="col col-sm-6">
+      <%= f.input :startdate, :as => :date_picker, class: 'custom_input' %>
+    </div>
 
-  <%= form.input :jobtype, label: "Job Type" %>
+    <div class="col col-sm-6">
+      <%= f.input :jobtype, label: 'Job Type', :as => :select, :collection => Job.jobtypes.keys.to_a, include_blank: false %> 
+    </div>
+  </div>
+  
+  <%= f.input :salaryrate, label: "Salary / Rate" %>
+  <%= f.input :applyurl, label: "Link to apply for job" %>
+  <%= f.input :applyemail, label: "Email address for enquiries", placeholder: 'user@domain.com' %>
+  <%= f.button :submit, :class => 'btn btn-primary' %>
+<% end %>
 
-  <%= form.input :salaryrate, label: "Salary / Rate" %>
-
-   <%= form.input :applyurl, label: "Link to apply for job" %>
-
-  <%= form.input :applyemail, label: "Email address for enquiries", placeholder: 'user@domain.com' %>
-
-  <%= form.button :submit, :class => 'btn btn-primary' %>
-
-  <% end %>
+<script type="text/javascript">
+ $("input.date_picker").datepicker({dateFormat: 'yy-mm-dd'});
+</script>
