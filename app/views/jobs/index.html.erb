@@ -1,37 +1,32 @@
 <div class="container-fluid">
-	<h1>Current jobs</h1>
-
-
-<hr>
-
-
+	<h1 class="co-white">Current jobs</h1>
+  <hr>
 </div>
 
+<div class="container">
+  <% @jobs.each do |job| %>
+    <div class="jobsummary">
+      <div class="row">
+        <div class="col-xl-12">
+          <h2 class="co-dark-grey"><%= job.title %> at <%= job.company %></h2>
+          <p class="co-dark-grey"><span class="bold">Description:</span> <%= job.description %> </p>
+          <div class="row">
+            <div class="col col-sm-8">
+              <p class="in-line"><button type="button" class="btn btn-info bg-orange border-orange width-125 t-center"><%= link_to "More info", job, class: 'co-white bold' %></button></p>
+              <p class="in-line"><button type="button" class="btn btn-info bg-red border-red width-125 t-center"><%= link_to "Apply Now", job.applyurl, target: :_blank, class: 'co-white bold' %></button></p>
+            </div>
 
-
-<div class="container-fluid">
-<% @jobs.each do |job| %>
-
-<div class="jobsummary">
-<div class="row">
-<div class="col-xl-12">
-
-    <h2><%= link_to job.title, job.applyurl, target: :_blank %> at <%= link_to job.companyurl, job.company %></h2>
-    <p>Location: <%= job.location %></br></p>
-    Description: <%= job.description %></br>
-    Salary: <%= job.salaryrate %></p>
-
-	<p><button type="button" class="btn btn-info"><%= link_to "More info", job %></button></p>
- 	<p><button type="button" class="btn btn-info"><%= link_to "Apply", job.applyurl, target: :_blank %></button></p>
- 	<hr>
-
+            <div class="col col-sm-4 t-right co-dark-grey">
+              <p class="ma-0"><span class="bold">Location:</span> <%= job.location %></p>
+              <p class="ma-0"><span class="bold">Posted:</span> <%= time_ago_in_words(job.created_at) %> ago</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
 </div>
-</div>
-</div>
-<% end %>
 
 <p><%= paginate @jobs %></p>
-
-</div>
 
 
