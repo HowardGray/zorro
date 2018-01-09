@@ -1,33 +1,29 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+ /*
+ *= require jquery-ui
+ */
+
+@import "bootstrap";
+
 body {
   background-image: linear-gradient(199deg, #B4D6C6, #576A9C);
   background-repeat: no-repeat;
   height: 100%;
   background-attachment: fixed;
-  color: white;
   font: 14px/1.5 Helvetica, Arial, sans-serif;
-  margin: 20px auto;
-  width: 500px;
 }
-a {
-  color: #efaaca;
-  text-decoration: none;
-
-}
-
-a:hover
-{
-color: #ffffff;
-}
-
-.jobsummary
-{
-  background-color: #000;
-  color: white;
-  font: 14px/1.5 Helvetica, Arial, sans-serif;
-  margin: 20px auto;
-  width: 800px;
-}
-
 
 hr {
   -moz-border-bottom-colors: none;
@@ -41,60 +37,116 @@ hr {
   margin: 20px 0;
 }
 
+/* General Styles */
 
-.btn {
-    padding: 14px 24px;
-    border: 0 none;
-    font-weight: 700;
-    color: #E7812E;
-}
- 
-.btn-info {
-  color: #E7812E;
+.bold {
+  font-weight: bold;
 }
 
-
-.btn:focus, .btn:active:focus, .btn.active:focus {
-    outline: 0 none;
-}
- 
-
-.btn-lg.round {
-  border-radius: 24px;
-} 
-
-
-.btn-primary {
-    background: #0099cc;
-    color: #ffffff;
-}
- 
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
-    background: #33a6cc;
-}
- 
-.btn-primary:active, .btn-primary.active {
-    background: #007299;
-    box-shadow: none;
+.t-center {
+  text-align: center;
 }
 
+.t-right {
+  text-align: right;
+}
 
-@import "bootstrap";
+.co-white {
+  color: #fff !important;
+}
+
+.co-dark-grey {
+  color: #888888;
+}
+
+.bg-orange {
+  background-color: #F29A36 !important;
+}
+
+.border-orange {
+  border-color: #F29A36 !important;
+}
+
+.bg-red {
+  background-color: #CF4529 !important;
+}
+
+.border-red {
+  border-color: #CF4529 !important; 
+}
 
 
+.ma-0 {
+  margin: 0px !important;
+}
 
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+.ma-ver-15 {
+  margin-right: 15px !important;
+  margin-left: 15px !important
+}
+
+.pa-30 {
+  padding: 30px;
+}
+
+.bg-color-white {
+  background-color: #fff;
+}
+
+.bo-radious-5 {
+  border-radius: 5px
+}
+
+.width-100 {
+  width: 100px;
+}
+
+.width-125 {
+  width: 125px;
+}
+
+.in-line {
+  display: inline-block;
+}
+
+/* Custom Styles */
+
+.hasDatepicker {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out
+}
+
+
+.jobsummary {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+.jobsummary h2 {
+  font-size: 24px !important;
+}
+
+.job-apply-wrapper {
+  position: relative;
+}
+
+.job-apply-wrapper p {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
