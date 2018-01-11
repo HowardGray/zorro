@@ -9,7 +9,7 @@
     </div>
 
     <div class="col col-sm-6">
-      <%= f.input :companyurl, label: "Company URL" %>
+      <%= f.input :companyurl, label: "Company URL", placeholder: 'http://example.com', error: 'Please add a valid url. Ex: http://www.example.com'  %>
     </div>
   </div>
 
@@ -35,7 +35,7 @@
   </div>
   
   <%= f.input :salaryrate, label: "Salary / Rate" %>
-  <%= f.input :applyurl, label: "Link to apply for job" %>
+  <%= f.input :applyurl, label: "Link to apply for job", placeholder: 'http://example.com', error: 'Please add a valid url. Ex: http://www.example.com'  %>
   <%= f.input :applyemail, label: "Email address for enquiries", placeholder: 'user@domain.com' %>
   <%= f.button :submit, :class => 'btn btn-primary' %>
 <% end %>

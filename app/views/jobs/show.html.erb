@@ -1,10 +1,9 @@
 <div class="container">
-
   <div class="job-apply-wrapper">
     <h2 class="co-white"><%= @job.title %> at <%= @job.company %></h2>
     <p class="pull-right">
       <button type="button" class="btn btn-info border-red bg-red co-white">
-        <%= link_to "Apply Now", '#',class: 'co-white'%>
+        <%= link_to "Apply Now", @job.applyurl, class: 'co-white'%>
       </button>
     </p>
   </div>
