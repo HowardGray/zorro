@@ -1,0 +1,27 @@
+<h1>Weekly Jobs</h1>
+
+<p>
+  <%= @jobs.count %> new jobs available.
+</p>
+
+  <p>Job information:</p>
+  
+
+  <% @jobs.each do |job|%>
+    <p>
+      Title: <%= job.title %><br/>
+      Description: <%= job.description %><br/>
+      Company: <%= job.company %><br/>
+      Location: <%= job.location %><br/>
+      Start Date: <%= job.startdate %><br/>
+      Apply Url: <%= job.applyurl %><br/>
+      Apply Email: <%= job.applyemail %><br/>
+      Job Type: <%= job.jobtype %><br/>
+      Salary Rate: <%= job.salaryrate %><br/>
+      Company Url: <%= job.companyurl %><br/>
+      Level: <%= job.level %><br/>
+    </p>
+  <% end %>
+
+
+
