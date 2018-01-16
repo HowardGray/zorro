@@ -3,18 +3,6 @@ Rails.application.configure do
 
 
 # HG Added Mailgun credentials
-config.action_mailer.delivery_method = :smtp
-config.action_mailer.smtp_settings = {
-  :authentication => :plain,
-  :address => "smtp.mailgun.org",
-  :port => 587,
-  :domain => "hbureau.mailgun.org",
-  :user_name => "postmaster@hbureau.mailgun.org",
-  :password => "MYPASSWORD"
-}
-
-
-
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
@@ -65,4 +53,16 @@ config.action_mailer.smtp_settings = {
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+
+  config.action_mailer.delivery_method = :smtp
+  # SMTP settings for mailgun
+  ActionMailer::Base.smtp_settings = {
+    :port           => 587,
+    :address        => "smtp.mailgun.org",
+    :domain         => 'mail.stems.london',
+    :user_name      => 'postmaster@mail.stems.london',
+    :password       => '6426a514ff5b09b5703f788ae8fad563',
+    :authentication => :plain
+  }
 end
