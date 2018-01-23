@@ -7,6 +7,6 @@ class JobsMailer < ApplicationMailer
   #
   def weekly_jobs
     @jobs = Job.posted_last_week
-    mail to: "henry2992@gmail.com"
+    mail to: "hg@hbureau.com"
   end
 end
