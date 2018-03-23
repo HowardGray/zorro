@@ -40,6 +40,7 @@ gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem "mail_form", ">= 1.3.0"
+gem 'stripe'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -38,8 +38,30 @@
   <%= f.input :applyurl, label: "Link to apply for job", placeholder: 'http://example.com', error: 'Please add a valid url. Ex: http://www.example.com'  %>
   <%= f.input :applyemail, label: "Email address for enquiries", placeholder: 'user@domain.com' %>
   <%= f.button :submit, :class => 'btn btn-primary' %>
+
+
+
 <% end %>
 
 <script type="text/javascript">
- $("input.date_picker").datepicker({dateFormat: 'yy-mm-dd'});
+ $("input.date_picker").datepicker({dateFormat: 'dd-mm-yy'});
 </script>
+
+<!-- Stripe checkout code -->
+<%= form_tag charges_path do %>
+<article>
+  <% if flash[:error].present? %>
+  <div id="error_explanation">
+    <p><%= flash[:error] %></p>
+  </div>
+  <% end %>
+  <label class="amount">
+  <span>Amount: $<%= @order.price %></span>
+  </label>
+</article>
+<script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+  data-key="<%= pk_live_DxXAWKoEgB0vf4TdQtXjcijz %>"
+  data-description="A month's subscription"
+  data-amount="<%= @order.price %>"
+  data-locale="auto"></script>
+<% end %>
