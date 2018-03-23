@@ -1,19 +1,46 @@
 default: &default
   adapter: postgresql
+  encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
-development:
-  <<: *default
-  database: zorro_development
+#development:
+ # <<: *default
+  #database: zorro_development
+ # username: howardgray
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
+#test:
+ # <<: *default
+ # database: zorro_test
+
+
+
+ # Below are HG"s updated dev and test database creds
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: zorro_development
+  pool: 5
+  username: howardgray
+  password:
+
 test:
-  <<: *default
+  adapter: postgresql
+  encoding: unicode
   database: zorro_test
+  pool: 5
+  username: howardgray
+  password:
+
+
+
 
 production:
   <<: *default
   database: zorro_production
+
+

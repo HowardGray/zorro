@@ -10,4 +10,9 @@ class Job < ActiveRecord::Base
   def self.send_weekly_email
     JobsMailer.weekly_jobs.deliver_now
   end
+
+  def self.search(search)
+  where("title LIKE ? OR description LIKE ? OR company LIKE ?", "%#{search}%", "%#{search}%", "%#{search}%") 
+end
+
 end

@@ -7,12 +7,20 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto">
+       <li class="nav-item">
+    <%= form_tag(jobs_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search Jobs" %>
+    <%= submit_tag "Search", :name => nil %>
+</li>
       <li class="nav-item active">
         <%= link_to "Post a job", new_job_path, class: 'nav-link bg-orange co-white ma-ver-15 bo-radious-5 width-100 t-center bold' %>
       </li>
+
       <li class="nav-item">
         <%= link_to "About", pages_about_path, class: 'nav-link bg-orange co-white ma-ver-15 bo-radious-5 width-100 t-center bold' %>
       </li>
     </ul>
+
+<% end %>
   </div>
 </nav>

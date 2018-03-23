@@ -13,8 +13,19 @@
       <div class="col-md-12 co-dark-grey">
         <p><span class="bold">Description:</span> <%= @job.description %></p>
         <p><span class="bold">Location:</span> <%= @job.location %></p>
+         <p><span class="bold">Start Date:</span> <%= @job.startdate %></p>
+         <p><span class="bold">Job Type:</span> <%= @job.jobtype %></p>
+         <p><span class="bold">Salary:</span> <%= @job.salaryrate %></p>
+         <p><span class="bold">Company Website:</span> <%= @job.companyurl %></p>
+         <p><span class="bold">Contact email for more information:</span> <%= @job.applyemail %></p>
         <p><span class="bold">Posted:</span> <%= time_ago_in_words(@job.created_at) %> ago</p>
+
+           <button type="button" class="btn btn-info border-red bg-red co-white">
+        <%= link_to "Apply Now", @job.applyurl, class: 'co-white'%>
+      </button>
       </div>
     </div>
   </div>
+  <%= link_to "< back to job listings", root_path,class: 'co-white'%>
+
 </div>
