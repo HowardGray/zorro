@@ -33,7 +33,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem 'simple_form', '~> 3.5'
+gem 'simple_form', '~> 5.0'
 gem 'bootstrap', '~> 4.0.0.beta3'
 gem 'kaminari'
 gem 'bootstrap-sass'
